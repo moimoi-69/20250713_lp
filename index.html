@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIプログラミング学習コミュニティ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #5865F2;
+            --background-color: #f8f9fa;
+            --text-color: #343a40;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-image: url('images/hero-image..png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5em;
+            font-weight: 600;
+        }
+        header p {
+            font-size: 1.3em;
+            max-width: 600px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 30px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(88, 101, 242, 0.5);
+        }
+        .cta-button:hover {
+            background-color: #4752C4;
+            transform: translateY(-3px);
+        }
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        .card {
+            background: var(--card-bg);
+            margin-bottom: 20px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-item {
+            text-align: center;
+        }
+        .feature-item strong {
+            display: block;
+            font-size: 1.3em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .pricing-card {
+            text-align: center;
+            border: 2px solid #eee;
+        }
+        .pricing-card.recommended {
+            border-color: var(--secondary-color);
+        }
+        .pricing-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+        .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        .price span {
+            font-size: 0.5em;
+            font-weight: normal;
+        }
+        .pricing-card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+        .final-cta {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 60px 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>AIプログラミングを、仲間と共に学ぶ。</h1>
+            <p>未経験者から経験者まで、誰もがAI技術を学び、実践し、成長できるコミュニティへようこそ。</p>
+            <a href="https://discord.gg/CCUV6RNFPe" class="cta-button">今すぐDiscordに参加する</a>
+            <!-- TODO: href="#" を実際のDiscord招待リンクに置き換えてください -->
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">こんな方におすすめ</h2>
+            <div class="grid">
+                <div class="card">AIプログラミングに興味があるが、何から始めればいいかわからない方</div>
+                <div class="card">一緒に学ぶ仲間を見つけ、モチベーションを維持したい方</div>
+                <div class="card">最新のAI技術トレンドをキャッチアップしたい方</div>
+                <div class="card">自分のAIプロジェクトについて相談したり、フィードバックが欲しい方</div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">コミュニティでできること</h2>
+            <div class="grid">
+                <div class="card feature-item">
+                    <strong>質問と回答</strong>
+                    <span>疑問点を気軽に質問し、経験豊富なメンバーから回答を得られます。</span>
+                </div>
+                <div class="card feature-item">
+                    <strong>プロジェクト協力</strong>
+                    <span>仲間とチームを組んで、AIアプリケーションやモデル開発に挑戦できます。</span>
+                </div>
+                <div class="card feature-item">
+                    <strong>最新情報の共有</strong>
+                    <span>AIに関する最新ニュースや論文、便利なツールなどの情報が共有されます。</span>
+                </div>
+                <div class="card feature-item">
+                    <strong>勉強会・イベント</strong>
+                    <span>定期的なオンライン勉強会やもくもく会で、集中して学習できます。</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2 class="section-title">コースと価格</h2>
+            <div class="grid">
+                <div class="card pricing-card">
+                    <h3>フリープラン</h3>
+                    <div class="price">¥0<span>/月</span></div>
+                    <ul>
+                        <li>コミュニティ参加</li>
+                        <li>質問チャンネルへのアクセス</li>
+                        <li>公開イベントへの参加</li>
+                        <li>-</li>
+                    </ul>
+                    <a href="https://discord.gg/CCUV6RNFPe" class="cta-button">無料で始める</a>
+                </div>
+                <div class="card pricing-card recommended">
+                    <h3>スタンダードプラン</h3>
+                    <div class="price">¥980<span>/月</span></div>
+                    <ul>
+                        <li>フリープランの全内容</li>
+                        <li>限定勉強会への参加</li>
+                        <li>プロジェクト協力チャンネル</li>
+                        <li>コードレビュー</li>
+                    </ul>
+                    <a href="https://discord.gg/CCUV6RNFPe" class="cta-button">参加する</a>
+                </div>
+                <div class="card pricing-card">
+                    <h3>プレミアムプラン</h3>
+                    <div class="price">¥2,980<span>/月</span></div>
+                    <ul>
+                        <li>スタンダードプランの全内容</li>
+                        <li>個別メンタリング（月1回）</li>
+                        <li>キャリア相談</li>
+                        <li>限定コンテンツへのアクセス</li>
+                    </ul>
+                    <a href="https://discord.gg/CCUV6RNFPe" class="cta-button">参加する</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="final-cta">
+            <h2 class="section-title">さあ、あなたもAI学習の旅を始めよう</h2>
+            <p>参加は簡単です。下のボタンから私たちのDiscordサーバーに参加してください。</p>
+            <a href="https://discord.gg/CCUV6RNFPe" class="cta-button">Discordに参加する</a>
+            <!-- TODO: href="#" を実際のDiscord招待リンクに置き換えてください -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AIプログラミング学習コミュニティ. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
